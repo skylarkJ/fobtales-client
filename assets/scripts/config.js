@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://ga-wdi-boston.herokuapp.com',
+    production: 'https://git.heroku.com/sleepy-hollows-32453.herokuapp.com',
   },
 };
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>FOB Tales</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags unless you know what you are doing -->
@@ -12,14 +12,162 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+      <h1 class="style-main-header">Funniest FOB Tales </h1>
+      <nav id="style-nav" class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse nav-style" id="bs-example-navbar-collapse-1">
+
+            <button id="button-signup-nav" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignUp" data-whatever="@mdo">Sign Up</button>
+            <button id="button-signin-nav" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignIn" data-whatever="@mdo">Sign In</button>
+            <button id="button-signout-nav" type="button" class="style-button-signout btn btn-primary" data-toggle="modal" data-target="#modalSignOut" data-whatever="@mdo">Sign Out</button>
+            <button id="button-password" type="button" class="style-button-password btn btn-primary" data-toggle="modal" data-target="#modalChangePassword" data-whatever="@mdo">Change Password</button>
+
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+       <div class="message"></div>
+      </nav>
+
+      <div class="jumbotron">
+       <div class="container">
+
+
+        <button id="create-game" type="button" class="btn btn-primary create-button" data-toggle="" data-target="" data-whatever="@mdo">Create Game</button>
+
+        <!-- Modal Sign Up-->
+        <div class="modal fade sign-up" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!--<h4 class="modal-title" id="myModalLabel">Sign Up</h4>-->
+              </div>
+              <div class="modal-body">
+                 <form id="sign-up">
+                   <fieldset>
+                     <legend>Sign Up</legend>
+                     <label>
+                       Email
+                       <input type="text" class="form-control" name="credentials[email]">
+                     </label><br>
+                     <label>
+                       Password
+                       <input type="password" class="form-control" name="credentials[password]">
+                     </label><br>
+                     <label>
+                       Password Confirmation
+                       <input type="password" class="form-control" name="credentials[password_confirmation]">
+                     </label>
+
+                     <input id="style-signup" type="submit" class="sign-up-form form-control button-form" name="submit" value="Sign Up">
+                   </fieldset>
+                 </form>
+               </div> <!-- End of modal body -->
+             </div> <!-- modal-content -->
+           </div> <!-- modal-dialog -->
+         </div> <!-- End of modalSignUp -->
+
+
+
+
+        <!-- Modal Sign In-->
+        <div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!--<h4 class="modal-title" id="myModalLabel">Sign In</h4>-->
+              </div>
+              <div class="modal-body">
+                 <form id="sign-in">
+                   <fieldset>
+                     <legend>Sign In</legend>
+                     <label>
+                       Email
+                       <input type="text" class="form-control" name="credentials[email]">
+                     </label><br>
+                     <label>
+                       Password
+                       <input type="password" class="form-control" name="credentials[password]">
+                     </label>
+
+                     <input id="style-signin" type="submit" class="form-control button-form" name="submit" value="Sign In">
+                   </fieldset>
+                 </form>
+               </div> <!-- End of modal body -->
+             </div> <!-- modal-content -->
+           </div> <!-- modal-dialog -->
+         </div> <!-- End of modalSignIn -->
+
+
+         <!-- Modal Change Password -->
+         <div class="modal fade" id="modalChangePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+           <div class="modal-dialog" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                 <!--<h4 class="modal-title" id="myModalLabel">Change Password</h4>-->
+               </div>
+               <div class="modal-body">
+
+                <form id="change-password">
+                  <fieldset>
+                    <legend>Change Password</legend>
+                    <label>
+                      Current Password
+                      <input type="password" class="form-control" name="passwords[old]">
+                    </label><br>
+                    <label>
+                      New Password
+                      <input type="password" class="form-control" name="passwords[new]">
+                    </label>
+
+                    <input id="style-changepassword" type="submit"  class="form-control button-form" name="submit" value="Change Password">
+                  </fieldset>
+                </form>
+
+              </div> <!-- End of modal body -->
+            </div> <!-- modal-content -->
+          </div> <!-- modal-dialog -->
+         </div> <!-- End of modalChangePassword -->
+
+
+
+
+        <!-- Modal Sign Out -->
+        <div class="modal fade" id="modalSignOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!--<h4 class="modal-title" id="myModalLabel">Sign Out</h4>-->
+              </div>
+              <div class="modal-body">
+
+
+               <form id="sign-out">
+                 <fieldset>
+                   <legend>Sign Out</legend>
+                   <input id="style-signout" type="submit" name="submit"  class="form-control button-form" value="Sign Out">
+                 </fieldset>
+               </form>
+
+               </div> <!-- End of modal body -->
+             </div> <!-- modal-content -->
+           </div> <!-- modal-dialog -->
+         </div> <!-- End of modalSignOut -->
+
+       </div> <!-- container -->
+    </div> <!-- jumbotron -->
+  </body>
 </html>
