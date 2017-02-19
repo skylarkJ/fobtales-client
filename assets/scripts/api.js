@@ -80,7 +80,7 @@ const updateStory = function(ID,data) {
 
 const deleteStory = function(ID) {
   return $.ajax({
-    url: config.apiOrigin + '/stories/' + ID, // coming from stories folder from api r
+    url: config.apiOrigin + '/stories/' + ID,
     headers: {
       Authorization: `Token token=${store.user.token}`,
     },
