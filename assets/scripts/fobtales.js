@@ -1,5 +1,5 @@
 'use strict';
-const api = require('./auth/api');
+const api = require('./api');
 const store = require('./store');
 
 

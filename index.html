@@ -40,9 +40,112 @@
 
       <div class="jumbotron">
        <div class="container">
+         <div class="user-name"></div>
+
+        <button id="create-story" type="button" class="btn btn-primary create-button" data-toggle="modal" data-target="#modalCreateStory" data-whatever="@mdo">Create Story</button>
+
+        <!-- modal story -->
+        <div class="modal fade" id="modalCreateStory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!--<h4 class="modal-title" id="myModalLabel">Sign Up</h4>-->
+              </div>
+              <div class="modal-body">
+                 <form id="story">
+                   <fieldset>
+                     <legend>Create Story</legend>
+                     <label>
+                       Title
+                       <input type="text" class="form-control" name="story[title]">
+                     </label><br>
+
+                     <label>
+                       Content
+                       <textarea class="form-control" name="story[content]"></textarea>
+                     </label><br>
+
+                     <input id="style-signup" type="submit" class="sign-up-form form-control button-form" name="submit" value="Create Story">
+                   </fieldset>
+                 </form>
+               </div> <!-- End of modal body -->
+             </div> <!-- modal-content -->
+           </div> <!-- modal-dialog -->
+         </div> <!-- End of modalStory -->
 
 
-        <button id="create-game" type="button" class="btn btn-primary create-button" data-toggle="" data-target="" data-whatever="@mdo">Create Game</button>
+         <!-- modal view story -->
+         <div class="modal fade" id="modalStory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+           <div class="modal-dialog" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                 <!--<h4 class="modal-title" id="myModalLabel">Sign Up</h4>-->
+               </div>
+               <div class="modal-body">
+
+                </div> <!-- End of modal body -->
+              </div> <!-- modal-content -->
+            </div> <!-- modal-dialog -->
+          </div> <!-- End of modal view story -->
+
+          <!-- modal update story -->
+          <div class="modal fade" id="modalUpdateStory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <!--<h4 class="modal-title" id="myModalLabel">Sign Up</h4>-->
+                </div>
+                <div class="modal-body">
+                  <form id="update-story">
+                    <fieldset>
+                      <legend>Update Story</legend>
+                      <input type="hidden" class="story-id" name="story[id]">
+                      <label>
+                        Title
+                        <input type="text" class="form-control story-title" name="story[title]">
+                      </label><br>
+
+                      <label>
+                        Content
+                        <textarea class="form-control story-content" name="story[content]"></textarea>
+                      </label><br>
+
+                      <input id="style-signup" type="submit" class="sign-up-form form-control button-form" name="submit" value="Update Story">
+                    </fieldset>
+                  </form>
+                </div> <!-- End of modal body -->
+               </div> <!-- modal-content -->
+             </div> <!-- modal-dialog -->
+           </div> <!-- End of modal update story -->
+
+
+          <!-- modal delete story -->
+          <div class="modal fade" id="modalDeleteStory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <!--<h4 class="modal-title" id="myModalLabel">Sign Up</h4>-->
+                </div>
+                <div class="modal-body">
+                   <form id="delete-story">
+                     <fieldset>
+                       <legend>Are you sure?</legend>
+                       <input class="story-id" type="hidden" name="story[id]">
+                       <input id="style-signup" type="submit" class="sign-up-form form-control button-form" name="submit" value="Delete Story">
+                     </fieldset>
+                   </form>
+                 </div> <!-- End of modal body -->
+               </div> <!-- modal-content -->
+             </div> <!-- modal-dialog -->
+           </div> <!-- End of modal delete story -->
+
+        <div class="stories">
+        </div>
+
 
         <!-- Modal Sign Up-->
         <div class="modal fade sign-up" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">

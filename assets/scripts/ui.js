@@ -1,4 +1,5 @@
 'use strict';
+const store = require('./store');
 
 const success = (data) => {
   if (data) {
@@ -28,7 +29,7 @@ const signUpError = function () {
   $('#modalSignUp').modal('hide');
 };
 
-const signInSuccess = function () {
+const signInSuccess = function (data) {
   $('.message').show();
   $('.message').text('You are Successfully signed in!').css('color', 'blue');
   $('.message').hide(10000);
@@ -37,7 +38,8 @@ const signInSuccess = function () {
   $('#button-signup-nav').hide();
   $('.style-button-password').show();
   $('.style-button-signout').show();
-  $('.create-button').show();
+  $('#create-story').show();
+  $('.user-name').html('<div>' + data.email + '</div>');
 };
 
 const signInError = function () {
@@ -77,6 +79,53 @@ const signOutError = function () {
   $('#modalSignOut').modal('hide').css('color', 'orange');
 };
 
+const updateStory = function () {
+  $('#modalStory').modal('hide');
+  setTimeout(function() {
+    $('#modalUpdateStory').modal('show');
+  }, 500);
+};
+
+const deleteStory = function () {
+  $('#modalStory').modal('hide');
+  setTimeout(function() {
+    $('#modalDeleteStory').modal('show');
+  }, 500);
+
+};
+
+const clickOnStory = function (event) {
+  const id = $(event.target).data('id');
+  const story = store.stories.find(function(s){
+    return s.id===id;
+  });
+$("#modalStory .modal-body").empty();
+$("#modalStory .modal-body").append("<div class='story'>" + story.content + "</div>");
+
+  if(store.user && story.user_id === store.user.id) {
+  $("#modalStory .modal-body").append('<button id="update-story" type="button" class="btn btn-primary update-button" data-toggle="modal" data-target="#modalUpdateStory" data-whatever="@mdo">Update Story</button>');
+  $("#modalStory .modal-body").append('<button id="delete-story" type="button" class="btn btn-primary delete-button" data-toggle="modal" data-target="#modalDeleteStory" data-whatever="@mdo">Delete Story</button>');
+  $("#update-story").on('click',updateStory);
+  $("#delete-story").on('click',deleteStory);
+  $(".story-id").val(id); // will set up hidden id for delete
+  $(".story-title").val(story.title);
+  $(".story-content").val(story.content);
+  }
+
+$('#modalStory').modal('show');
+};
+
+const stories = function (data) {
+  $('.stories').empty();
+  $('#modalCreateStory').modal('hide');
+  for (let i=0; i<data.stories.length; i++) {
+    $(".stories").append("<div class='story' data-id=" +data.stories[i].id +">" +data.stories[i].title + "</div>");
+
+
+  }
+  $('.story').on('click', clickOnStory)
+};
+
 module.exports = {
   failure,
   success,
@@ -87,5 +136,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordError,
   signOutSuccess,
-  signOutError
+  signOutError,
+  stories
 };
