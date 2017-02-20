@@ -1,6 +1,128 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-#create-story {
-  display: none;
+$tablet: "(min-width: 481px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+$phone: "(max-width: 480px)";
+
+
+@media #{$tablet} {
+
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .btn-primary {
+    background-color: transparent;
+    color: #311B92;
+    border-color: transparent;
+  }
+
+  .btn-primary:hover {
+    background-color: transparent;
+    border-color: #311B92;
+    color: #311B92;
+  }
+
+  .jumbotron {
+    padding-top: 30px !important;
+  }
+
+  .stories {
+    font-size: 1.7em;
+    line-height: 1.5em;
+    float: left;
+  }
+
+  #create-story {
+    clear: left;
+    color: #fff;
+    float: right;
+    height: 40px;
+    width: 200px;
+  }
+
+  .user-name {
+    float: left;
+    margin-bottom: 10px;
+    margin-left: -20px;
+  }
+
+
+
+  .story:hover {
+    color: white !important;
+    font-weight: 600;
+  }
+}
+
+
+@media #{$phone} {
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .btn-primary {
+    background-color: transparent;
+    color: #311B92;
+    border-color: transparent;
+  }
+
+  .btn-primary:hover {
+    background-color: transparent;
+    border-color: #311B92;
+    color: #311B92;
+  }
+
+  .stories {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-top: 10%;
+  }
+
+  #create-story {
+    color: #fff;
+    border-color: #311B92;
+    height: 40px;
+    width: 100%;
+  }
+
+  .user-name {
+    margin-bottom: 10px;
+    margin-left: -20px;
+  }
+
+  #story textarea {
+    height: 200px;
+    width: 320px;
+  }
+
+  #update-story textarea {
+    height: 200px;
+    width: 320px;
+  }
+
+  .story:hover {
+    color: white !important;
+    font-weight: 600;
+  }
+
+}
+
+  #create-story {
+    background: #311B92;
+    border-radius: 50px;
+    display: none;
+  }
+
+.user-name {
+  color: yellow;
+  font-size: 2em;
+
+}
+
+.jumbotron {
+  padding-top: 0;
 }
