@@ -31,19 +31,26 @@ $accent-hover: #32018f;
 }
 
 @media #{$phone} {
+   h1 {
+    font-size: 1em;
+   }
+
   .jumbotron {
     margin-bottom: 50px;
   }
 
   .stories {
     font-size: 1.2em!important;
-    line-height: 1.5em;
-    margin-top: 10%;
+    line-height: 2.5em;
+    margin-top: 0px!important;
+
   }
 
   #create-story {
     height: 40px;
-    width: 100%;
+    width: 120px!important;
+    position: relative;
+    bottom: 150px!important;
   }
 
   #story textarea {
@@ -64,6 +71,17 @@ body {
   font-family: legal;
 }
 
+p {
+  color: $text;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  line-height: 1.2em;
+}
+
+.style-main-text {
+  margin: 0 30px;
+}
+
 .logo {
   background: url('http://fobtales.com/images/fob_tales_logo.png') no-repeat;
   width: 180px;
@@ -73,6 +91,7 @@ body {
 
 .style-main-header {
   text-align: center;
+  color: $text;
 }
 
 .navbar-default {
@@ -166,6 +185,10 @@ body {
   background-color: $accent-hover;
 }
 
+#style-nav {
+  margin-bottom: 0px;
+}
+
 .user-name {
   color: $text;
   float: left;
@@ -205,11 +228,20 @@ body {
   line-height: 1.5em;
 }
 
-.story:hover {
-  color: $text !important;
-  font-weight: 600;
+
+#modalStory .story {
+  color: black !important;
 }
 
 #modalStory .story:hover {
   color: black!important;
+}
+
+.story:hover {
+  color: $text;
+  font-weight: 600;
+}
+
+.story {
+  color: $text;
 }
