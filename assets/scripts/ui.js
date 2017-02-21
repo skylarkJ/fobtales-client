@@ -71,6 +71,7 @@ const signOutSuccess = function () {
   $('#button-signin-nav').show();
   $('#button-signup-nav').show();
   $('#button-signout-nav').hide();
+  $('.user-name').hide();
 };
 
 const signOutError = function () {

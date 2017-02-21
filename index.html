@@ -11,10 +11,11 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
+    <body class="container-fluid background-main">
+      <div class="logo"></div>
       <h1 class="style-main-header">Funniest FOB Tales </h1>
       <nav id="style-nav" class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container-fluid align-nav-button">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -36,11 +37,12 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
        <div class="message"></div>
+       <div class="user-name"></div>
       </nav>
 
       <div class="jumbotron">
        <div class="container">
-         <div class="user-name"></div>
+
 
         <button id="create-story" type="button" class="btn btn-primary create-button" data-toggle="modal" data-target="#modalCreateStory" data-whatever="@mdo">Create Story</button>
 
@@ -150,7 +152,7 @@
         <!-- Modal Sign Up-->
         <div class="modal fade sign-up" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
           <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content content-width">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <!--<h4 class="modal-title" id="myModalLabel">Sign Up</h4>-->
@@ -186,7 +188,7 @@
         <!-- Modal Sign In-->
         <div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content content-width">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <!--<h4 class="modal-title" id="myModalLabel">Sign In</h4>-->
@@ -216,7 +218,7 @@
          <!-- Modal Change Password -->
          <div class="modal fade" id="modalChangePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
            <div class="modal-dialog" role="document">
-             <div class="modal-content">
+             <div class="modal-content content-width">
                <div class="modal-header">
                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                  <!--<h4 class="modal-title" id="myModalLabel">Change Password</h4>-->
@@ -250,7 +252,7 @@
         <!-- Modal Sign Out -->
         <div class="modal fade" id="modalSignOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content content-width">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <!--<h4 class="modal-title" id="myModalLabel">Sign Out</h4>-->
