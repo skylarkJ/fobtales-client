@@ -60,7 +60,7 @@ $accent-hover: #32018f;
 body {
   background: url('http://fobtales.com/images/bg_image.png') no-repeat;
   background-size: cover;
-  color: #ffffff;
+  color: black;
   font-family: legal;
 }
 
@@ -208,4 +208,8 @@ body {
 .story:hover {
   color: $text !important;
   font-weight: 600;
+}
+
+#modalStory .story:hover {
+  color: black!important;
 }
