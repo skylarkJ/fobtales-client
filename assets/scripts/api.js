@@ -50,7 +50,7 @@ const stories = function() {
 
 const story = function(ID) {
   return $.ajax({
-    url: config.apiOrigin + '/stories/' + ID, // coming from stories folder from api r
+    url: config.apiOrigin + '/stories/' + ID,
     method: 'GET'
   });
 };

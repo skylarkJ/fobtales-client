@@ -108,7 +108,7 @@ $("#modalStory .modal-body").append("<div class='story'>" + story.content + "</d
   $("#modalStory .modal-body").append('<button id="delete-story" type="button" class="btn btn-primary delete-button" data-toggle="modal" data-target="#modalDeleteStory" data-whatever="@mdo">Delete Story</button>');
   $("#update-story").on('click',updateStory);
   $("#delete-story").on('click',deleteStory);
-  $(".story-id").val(id); // will set up hidden id for delete
+  $(".story-id").val(id); // will setup hidden id for delete
   $(".story-title").val(story.title);
   $(".story-content").val(story.content);
   }
@@ -118,7 +118,7 @@ $('#modalStory').modal('show');
 
 const stories = function (data) {
   $('.stories').empty();
-  $('#modalCreateStory').modal('hide');
+  // $('#modalCreateStory').modal('hide');
   for (let i=0; i<data.stories.length; i++) {
     $(".stories").append("<div class='story' data-id=" +data.stories[i].id +">" +data.stories[i].title + "</div>");
 
