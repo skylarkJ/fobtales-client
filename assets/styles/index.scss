@@ -1,5 +1,6 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 $desktop: '(min-width: 1024px)';
 $tablet: '(min-width: 481px) and (max-width: 1023px)';
 $phone: '(max-width: 480px)';
@@ -31,8 +32,16 @@ $accent-hover: #32018f;
 }
 
 @media #{$phone} {
-   h1 {
-    font-size: 1em;
+   .logo {
+    //  height: 75px!important;
+    //  width: 90px!important;
+     background-size: 50% 50%!important;
+     margin-left: 10px!important;
+     margin-top: 15px!important;
+   }
+
+   .style-main-text {
+     margin: 0 10px;
    }
 
   .jumbotron {
@@ -49,8 +58,11 @@ $accent-hover: #32018f;
   #create-story {
     height: 40px;
     width: 120px!important;
-    position: relative;
-    bottom: 150px!important;
+    // position: relative;
+    // bottom: 150px!important;
+    position: absolute;
+    top: 14%;
+    right: 100px;
   }
 
   #story textarea {
@@ -60,22 +72,31 @@ $accent-hover: #32018f;
 
   #update-story textarea {
     height: 200px;
-    width: 320px;
+    width: 270px;
   }
 }
 
 body {
   background: url('http://fobtales.com/images/bg_image.png') no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   color: black;
-  font-family: legal;
+  font-family: 'Roboto';
 }
 
 p {
   color: $text;
-  font-size: 1.5em;
+  font-size: 1em;
+  // line-height: 1.2em;
   margin-bottom: 10px;
-  line-height: 1.2em;
+
+}
+
+.main-text {
+  font-size: 1em;
+}
+
+.sub-text {
+  font-size: .85em;
 }
 
 .style-main-text {
@@ -85,13 +106,8 @@ p {
 .logo {
   background: url('http://fobtales.com/images/fob_tales_logo.png') no-repeat;
   width: 180px;
-  height: 100px;
+  height: 150px;
   margin: 0 auto;
-}
-
-.style-main-header {
-  text-align: center;
-  color: $text;
 }
 
 .navbar-default {
