@@ -32,10 +32,10 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse nav-style" id="bs-example-navbar-collapse-1">
 
-            <button id="button-signup-nav" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignUp" data-whatever="@mdo">Sign Up</button>
-            <button id="button-signin-nav" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignIn" data-whatever="@mdo">Sign In</button>
-            <button id="button-signout-nav" type="button" class="style-button-signout btn btn-primary" data-toggle="modal" data-target="#modalSignOut" data-whatever="@mdo">Sign Out</button>
-            <button id="button-password" type="button" class="style-button-password btn btn-primary" data-toggle="modal" data-target="#modalChangePassword" data-whatever="@mdo">Change Password</button>
+            <button id="button-signup-nav"type="button" class="nav-bar btn btn-primary" data-toggle="modal" data-target="#modalSignUp" data-whatever="@mdo">Sign Up</button>
+            <button id="button-signin-nav" type="button" class="nav-bar btn btn-primary" data-toggle="modal" data-target="#modalSignIn" data-whatever="@mdo">Sign In</button>
+            <button id="button-signout-nav" type="button" class="nav-bar style-button-signout btn btn-primary" data-toggle="modal" data-target="#modalSignOut" data-whatever="@mdo">Sign Out</button>
+            <button id="button-password" type="button" class="nav-bar style-button-password btn btn-primary" data-toggle="modal" data-target="#modalChangePassword" data-whatever="@mdo">Change Password</button>
 
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -71,7 +71,7 @@
                        <textarea class="form-control" name="story[content]"></textarea>
                      </label><br>
 
-                     <input id="style-signup" type="submit" class="sign-up-form form-control button-form" name="submit" value="Create Story">
+                     <input type="submit" class="style-modalinside-btn form-control button-form" name="submit" value="Create Story">
                    </fieldset>
                  </form>
                </div> <!-- End of modal body -->
@@ -118,7 +118,7 @@
                         <textarea class="form-control story-content" name="story[content]"></textarea>
                       </label><br>
 
-                      <input id="style-signup" type="submit" class="sign-up-form form-control button-form" name="submit" value="Update Story">
+                      <input type="submit" class="style-modalinside-btn form-control button-form" name="submit" value="Update Story">
                     </fieldset>
                   </form>
                 </div> <!-- End of modal body -->
@@ -140,7 +140,7 @@
                      <fieldset>
                        <legend>Are you sure?</legend>
                        <input class="story-id" type="hidden" name="story[id]">
-                       <input id="style-signup" type="submit" class="sign-up-form form-control button-form" name="submit" value="Delete Story">
+                       <input type="submit" class="style-modalinside-btn form-control button-form" name="submit" value="Delete Story">
                      </fieldset>
                    </form>
                  </div> <!-- End of modal body -->
@@ -177,7 +177,7 @@
                        <input type="password" class="form-control" name="credentials[password_confirmation]">
                      </label>
 
-                     <input id="style-signup" type="submit" class="sign-up-form form-control button-form" name="submit" value="Sign Up">
+                     <input type="submit" class="style-modalinside-btn form-control button-form" name="submit" value="Sign Up">
                    </fieldset>
                  </form>
                </div> <!-- End of modal body -->
@@ -209,7 +209,7 @@
                        <input type="password" class="form-control" name="credentials[password]">
                      </label>
 
-                     <input id="style-signin" type="submit" class="form-control button-form" name="submit" value="Sign In">
+                     <input type="submit" class="style-modalinside-btn button-form" name="submit" value="Sign In">
                    </fieldset>
                  </form>
                </div> <!-- End of modal body -->
@@ -240,7 +240,7 @@
                       <input type="password" class="form-control" name="passwords[new]">
                     </label>
 
-                    <input id="style-changepassword" type="submit"  class="form-control button-form" name="submit" value="Change Password">
+                    <input type="submit"  class="style-modalinside-btn button-form" name="submit" value="Change Password">
                   </fieldset>
                 </form>
 
@@ -266,7 +266,7 @@
                <form id="sign-out">
                  <fieldset>
                    <legend>Sign Out</legend>
-                   <input id="style-signout" type="submit" name="submit"  class="form-control button-form" value="Sign Out">
+                   <input type="submit" name="submit"  class="style-modalinside-btn button-form" value="Sign Out">
                  </fieldset>
                </form>
 
