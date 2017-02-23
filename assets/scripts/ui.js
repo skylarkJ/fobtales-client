@@ -39,6 +39,7 @@ const signInSuccess = function (data) {
   $('.style-button-password').show();
   $('.style-button-signout').show();
   $('#create-story').show();
+  $('#create-story .modal-body').empty();
   $('.user-name').html('<div>' + data.email + '</div>');
 };
 
@@ -118,13 +119,11 @@ $('#modalStory').modal('show');
 
 const stories = function (data) {
   $('.stories').empty();
-  // $('#modalCreateStory').modal('hide');
+  $('#modalCreateStory').modal('hide');
   for (let i=0; i<data.stories.length; i++) {
     $(".stories").append("<div class='story' data-id=" +data.stories[i].id +">" +data.stories[i].title + "</div>");
-
-
   }
-  $('.story').on('click', clickOnStory)
+  $('.story').on('click', clickOnStory);
 };
 
 module.exports = {
