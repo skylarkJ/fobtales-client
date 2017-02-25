@@ -34,6 +34,7 @@ const signInSuccess = function (data) {
   $('.message').text('You are Successfully signed in!').css('color', 'blue');
   $('.message').hide(10000);
   $('#modalSignIn').modal('hide');
+  $('#button-signin-nav .modal-body').empty();
   $('#button-signin-nav').hide();
   $('#button-signup-nav').hide();
   $('.style-button-password').show();
