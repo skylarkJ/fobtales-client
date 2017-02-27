@@ -101,10 +101,10 @@ On Heroku Production Side
 ## Links
 APis Repo
 [https://github.com/skylarkJ/fobtales-api/tree/master](https://github.com/skylarkJ/fobtales-api/tree/master)
-Live Application
+Live Application - Client
 [https://skylarkj.github.io/fobtales-client/](https://skylarkj.github.io/fobtales-client/)
 
-Heroku
+Heroku - Back-end
 [https://sleepy-hollows-32453.herokuapp.com/](https://sleepy-hollows-32453.herokuapp.com/)
 
 WIREFRAMES
