@@ -15,18 +15,24 @@ const failure = (error) => {
   $('.message').text('Error!');
 };
 
+const clearModalInput = function (e) {
+$(e + ' > fieldset > label > input').val('');
+};
 
 const signUpSuccess = function () {
   $('.message').show();
   $('.message').text('Thank you for signing up! Now sign in!').css('color', 'blue');
   $('#modalSignUp').modal('hide');
   $('.message').hide(10000);
+  clearModalInput('#sign-up');
+  $('#modalSignUp #sign-up').html();
 };
 
 const signUpError = function () {
   $('.message').show();
   $('.message').text('Error signing up! Try again.').css('color', 'orange');
   $('#modalSignUp').modal('hide');
+  clearModalInput('#sign-up');
 };
 
 const signInSuccess = function (data) {
@@ -42,12 +48,14 @@ const signInSuccess = function (data) {
   $('#create-story').show();
   $('#create-story .modal-body').empty();
   $('.user-name').html('<div>' + data.email + '</div>');
+  clearModalInput('#sign-in');
 };
 
 const signInError = function () {
   $('.message').show();
   $('.message').text('Something went wrong. Sign in again!').css('color', 'orange');
   $('#modalSignIn').modal('hide');
+  clearModalInput('#sign-in');
 };
 
 const changePasswordSuccess = function () {
@@ -138,5 +146,6 @@ module.exports = {
   changePasswordError,
   signOutSuccess,
   signOutError,
-  stories
+  stories,
+  clearModalInput
 };
