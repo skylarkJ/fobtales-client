@@ -7,8 +7,8 @@ $tablet: '(min-width: 481px) and (max-width: 1023px)';
 $phone: '(max-width: 480px)';
 $text: #fff;
 $text-modal: #aaa;
-$accent-color: #311b92;
-$accent-hover: #32018f;
+$accent-color: #4286f4; //#311b92;
+$accent-hover: #034cc1; //#32018f;
 
 @media #{$desktop} {
   .navbar-collapse {
@@ -42,6 +42,9 @@ $accent-hover: #32018f;
 }
 
 @media #{$phone} {
+  html {
+    height: 120% !important;
+  }
   .logo {
     background-size: 50% 50%!important;
     margin-left: 10px !important;
@@ -53,8 +56,7 @@ $accent-hover: #32018f;
   }
 
   .nav-bar {
-    font-size: 1.3em;
-    font-weight: 800;
+    font-size: 1.3em !important;
   }
 
   .jumbotron {
@@ -88,8 +90,6 @@ $accent-hover: #32018f;
 
 html {
   height: 100%;
-  // margin: 0;
-  // padding: 0;
 }
 
 body {
@@ -97,21 +97,22 @@ body {
   background-size: 100% 100%;
   color: black;
   font-family: 'Roboto-light';
+  padding-top: 15px;
 }
 
 p {
   color: $text;
-  font-size: 1em;
+  font-size: 1.3em;
   // line-height: 1.2em;
   margin-bottom: 10px;
 }
 
 .main-text {
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
 .sub-text {
-  font-size: .85em;
+  font-size: 1.1em;
 }
 
 .style-main-text {
@@ -136,6 +137,10 @@ p {
 
 .navbar-toggle:focus {
   background-color: $text !important;
+}
+
+.nav-bar {
+  font-size: 1.5em;
 }
 
 .align-nav-button {
@@ -176,7 +181,9 @@ p {
   background-color: $accent-color;
   border-color: $accent-color;
   border-radius: 50px;
+  border: 3px;
   color: $text;
+  height: 35px;
   width: 150px;
 }
 
