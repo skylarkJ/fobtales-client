@@ -101,7 +101,6 @@ const deleteStory = function (event) {
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
-  //$('#style-signup').on('submit', onSignUp);
   $('#change-password').on('submit', onChangePassword);
   $('#sign-out').on('submit', onSignOut);
   $('#story').on('submit', createStory);
