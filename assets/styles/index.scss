@@ -43,9 +43,9 @@ $accent-hover: #034cc1; //#32018f;
 
 @media #{$phone} {
   .logo {
-    background-size: 50% 50%!important;
+    max-width: 130px !important;
+    margin: 0 auto 30px !important;
     margin-left: 10px !important;
-    margin-top: 15px !important;
   }
 
   .style-main-text {
@@ -112,12 +112,22 @@ p {
   margin: 0 30px;
 }
 
-.logo {
-  background: url('https://raw.githubusercontent.com/skylarkJ/fobtales-client/master/assets/fob_tales_logo.png') no-repeat;
-  height: 150px;
-  margin: 0 auto;
-  width: 180px;
+.logo a,
+.logo img {
+  display: block;
 }
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.logo{
+  max-width: 177px;
+  margin: 0 auto 60px;
+}
+
+
 
 .navbar-default {
   background-color: transparent;
