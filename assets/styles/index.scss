@@ -42,9 +42,6 @@ $accent-hover: #034cc1; //#32018f;
 }
 
 @media #{$phone} {
-  html {
-    height: 120% !important;
-  }
   .logo {
     background-size: 50% 50%!important;
     margin-left: 10px !important;
@@ -57,10 +54,6 @@ $accent-hover: #034cc1; //#32018f;
 
   .nav-bar {
     font-size: 1.3em !important;
-  }
-
-  .jumbotron {
-    margin-bottom: 50px;
   }
 
   .stories{
@@ -93,7 +86,7 @@ html {
 }
 
 body {
-  background: url('http://fobtales.com/images/bg_image.png') no-repeat;
+  background: url('https://raw.githubusercontent.com/skylarkJ/fobtales-client/46131bb087f11e78b285763d1b6a3f2c8bfbe578/assets/bg_image.png') no-repeat;
   background-size: 100% 100%;
   color: black;
   font-family: 'Roboto-light';
@@ -120,7 +113,7 @@ p {
 }
 
 .logo {
-  background: url('http://fobtales.com/images/fob_tales_logo.png') no-repeat;
+  background: url('https://raw.githubusercontent.com/skylarkJ/fobtales-client/master/assets/fob_tales_logo.png') no-repeat;
   height: 150px;
   margin: 0 auto;
   width: 180px;
@@ -202,10 +195,6 @@ p {
   margin-bottom: 10px;
 }
 
-.jumbotron {
-  background: transparent;
-  border: 1px solid $accent-color;
-}
 
 #create-story {
   background: $accent-color;

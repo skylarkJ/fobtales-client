@@ -135,6 +135,7 @@ const stories = function (data) {
   $('.story').on('click', clickOnStory);
 };
 
+
 module.exports = {
   failure,
   success,
