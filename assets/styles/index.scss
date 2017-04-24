@@ -72,7 +72,6 @@ $accent-hover: #034cc1; //#32018f;
 
   #story textarea {
     height: 200px;
-    width: 320px;
   }
 
   #update-story textarea {
@@ -255,4 +254,8 @@ p {
 
 .story {
   color: $text;
+}
+
+.style-field {
+  min-width: 100%;
 }

@@ -135,6 +135,10 @@ const stories = function (data) {
   $('.story').on('click', clickOnStory);
 };
 
+$('#create-story').on('click', function () {
+  $('.clear-title').val('');
+  $('.clear-content').val('');
+});
 
 module.exports = {
   failure,
@@ -148,5 +152,5 @@ module.exports = {
   signOutSuccess,
   signOutError,
   stories,
-  clearModalInput
+  clearModalInput,
 };
