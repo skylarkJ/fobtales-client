@@ -7,8 +7,8 @@ $tablet: '(min-width: 481px) and (max-width: 1023px)';
 $phone: '(max-width: 480px)';
 $text: #fff;
 $text-modal: #aaa;
-$accent-color: #4286f4; //#311b92;
-$accent-hover: #034cc1; //#32018f;
+$accent-color: #f2863a; //#311b92;
+$accent-hover: #ce6c27; //#32018f;
 
 @media #{$desktop} {
   .navbar-collapse {
