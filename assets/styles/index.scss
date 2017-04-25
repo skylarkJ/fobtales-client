@@ -39,6 +39,10 @@ $accent-hover: #ce6c27; //#32018f;
   .stories {
     font-size: 1.5em !important;
   }
+
+  .user-left {
+    font-size: 12px;
+  }
 }
 
 @media #{$phone} {
@@ -77,6 +81,10 @@ $accent-hover: #ce6c27; //#32018f;
   #update-story textarea {
     height: 200px;
     width: 270px;
+  }
+
+  .user-left {
+    width: 25% !important;
   }
 }
 
@@ -198,13 +206,27 @@ p {
   margin-bottom: 0;
 }
 
-.user-name {
-  color: #CCDD1E;
-  float: left;
-  font-size: 1.2em;
-  margin-bottom: 10px;
+.user-wrapper {
+  margin: 0 auto;
+  padding: 0 2em;
 }
 
+.user-left {
+  color: white;
+  float: left;
+  margin-right: 10px;
+  width: 15%;
+}
+
+.user-right {
+  float: left;
+  margin-top: -3px;
+}
+
+.user-name {
+  color: #CCDD1E;
+  font-size: 1.2em;
+}
 
 #create-story {
   background: $accent-color;
@@ -258,4 +280,11 @@ p {
 
 label {
   min-width: 100%;
+}
+
+.dashboard {
+  margin-top: 100px;
+  padding: 30px;
+  border: 1px solid $text;
+  width: 100%;
 }
