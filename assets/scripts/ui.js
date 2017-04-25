@@ -37,7 +37,7 @@ const signUpError = function () {
 
 const signInSuccess = function (data) {
   $('.message').show();
-  $('.message').text('You are Successfully signed in!').css('color', 'blue');
+  $('.message').text('You are Successfully signed in!').css('color', 'white');
   $('.message').hide(10000);
   $('#modalSignIn').modal('hide');
   $('#button-signin-nav .modal-body').empty();
