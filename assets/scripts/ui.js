@@ -36,6 +36,7 @@ const signUpError = function () {
 };
 
 const signInSuccess = function (data) {
+  $('.user-left').show();
   $('.message').show();
   $('.message').text('You are Successfully signed in!').css('color', 'white');
   $('.message').hide(10000);

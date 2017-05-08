@@ -56,6 +56,10 @@ $accent-hover: #ce6c27; //#32018f;
     margin: 0 10px;
   }
 
+  .sub-text {
+    display: none;
+  }
+
   .nav-bar {
     font-size: 1.3em !important;
   }
@@ -216,6 +220,7 @@ p {
   float: left;
   margin-right: 10px;
   width: 15%;
+  display: none;
 }
 
 .user-right {
